@@ -1,1 +1,7 @@
-package 'cowsay' do
+package 'tree' do
+	action :install
+end
+
+file "/etc/motd" do
+  content "Property of Alfonso"
+end
