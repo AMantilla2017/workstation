@@ -1,12 +1,10 @@
 package "tree"
 
-file "/etc/motd" do
+template "/etc/motd" do
   content "Property of Alfonso
-  	IPADDRESS: #{node['ipaddress']}
-	HOSTNAME: #{node['hostname']}
-	MEMORY: #{node['memory']['total']}
-	CPU: #{node['cpu']['0']['mhz']}
-"
+  source 'motd.erb' 	
+
+
 mode 0644
 owner 'root'
 group 'root'
